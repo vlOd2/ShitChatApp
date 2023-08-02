@@ -1,0 +1,14 @@
+﻿<Window x:Class="ShitChatApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ShitChatApp"
+        mc:Ignorable="d"
+        Title="ShitChatApp" Height="467" Width="803.993" Closing="Window_Closing" Loaded="Window_Loaded">
+    <Grid>
+        <RichTextBox x:Name="txtMessages" Margin="5,5,5,31" VerticalScrollBarVisibility="Auto" IsReadOnly="True" Block.LineHeight="1" IsReadOnlyCaretVisible="True"/>
+        <TextBox x:Name="txtInput" Margin="5,0,86,6" VerticalAlignment="Bottom" Height="20" TextChanged="txtInput_TextChanged" KeyDown="txtInput_KeyDown" MaxLength="10000" PreviewKeyDown="txtInput_PreviewKeyDown"/>
+        <Button x:Name="btnSend" Content="Send" Margin="0,0,6,6" Style="{DynamicResource SkypeButton}" HorizontalAlignment="Right" Width="75" VerticalAlignment="Bottom" Height="20" Click="btnSend_Click" IsEnabled="False"/>
+    </Grid>
+</Window>
